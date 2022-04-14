@@ -4,16 +4,16 @@
 .type QR, @function
 
 QR:
-	ADD $p1, $p1, $p2
-	EOR $p4, $p1, $p4
-	ADD $p3, $p3, $p4 ROR #16
-	EOR $p2, $p3, $p2
-	ADD $p1, $p1, $p2 ROR #20
-	EOR $p4, $p1, $p4 ROR #16
-	ROR $p4, $p4, #24
-	ADD $p3, $p3, $p4
-	EOR $p2, $p3, $p2
-	ROR $p2, $p2, #25
+	ADD r0, r0, r1
+	EOR r3, r0, r3
+	ADD r2, r2, r3 ROR #16
+	EOR r1, r2, r1
+	ADD r0, r0, r1 ROR #20
+	EOR r3, r0, r3 ROR #16
+	ROR r3, r3, #24
+	ADD r2, r2, r3
+	EOR r1, r2, r1
+	ROR r1, r1, #25
 	POP
 	bx lr
 
